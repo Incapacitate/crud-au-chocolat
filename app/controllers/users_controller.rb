@@ -13,11 +13,16 @@ class UsersController < ApplicationController
 
 	def create
 		puts params
-		@user = User.new(surname: params[:surname], email: params[:email], city: params[:city], age: params[:age])
+		@user = User.new(first_name: params[:first_name],
+                     	last_name: params[:last_name],
+                     	description: params[:description],
+                     	email: params[:email],
+                     	age: params[:age],
+                     	password: params[:password])
 		
 		if @user.save 
 			session[:user_id] = @user.id
-			redirect_to root_path, :notice => "Bienvenue, gros #{@user.surname} !"
+			redirect_to root_path, :notice => "Bienvenue, gros #{@user.first_name} !"
 
 		else render 'new'
 		end
