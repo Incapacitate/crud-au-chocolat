@@ -1,0 +1,32 @@
+<h1>LES GOSSIPS</h1>
+
+ <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+      	<% 
+	@gossips.each do |gossip|
+    @title = gossip.title
+    @content = gossip.content
+    @id = gossip.id
+
+    %>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+          	<img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSen4YdxA0o-H-kaxA9o-NnUsGyyS7KioIYRKR5oXN3gRhSQ_tf" alt="Image Gossip">
+            <div class="card-body">
+              <p class="card-text"><%= @title %></p>
+              <p class="card-text"><%= @content %></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="<%= gossip_path(gossip.id) %>" class="btn btn-sm btn-outline-secondary">Lire</a>
+    			  <a href="<%= edit_gossip_path(gossip.id) %>" class="btn btn-sm btn-outline-secondary">Éditer</a>
+   				  <a href="<%= gossip_path(gossip.id) %>" class="btn btn-danger" data-confirm="Sure about that?" data-method="DELETE">Supprimer</a>
+                </div>
+                <small class="text-muted">gossip.timestamps</small>
+              </div>
+            </div>
+          </div>
+	  </div>
+	  <% end %>
+    </div>
+ </div>
