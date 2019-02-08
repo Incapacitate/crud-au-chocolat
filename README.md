@@ -1,25 +1,16 @@
-# README
+# THP Semaine 5 Jour 4
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Projet du Supa Hot Gossip : 
 
-Things you may want to cover:
+Réalisation du projet Gossip, version boostée
+ 
 
-* Ruby version
+## Sur Slack :
 
-* System dependencies
+Salomé d'Audeteau, Fihiz sur slack
+Dylan LH, Dylan LH sur slack
 
-* Configuration
 
-* Database creation
+## Lien vers site Heroku :
+https://warm-hollows-80643.herokuapp.com 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# crud-au-chocolat
